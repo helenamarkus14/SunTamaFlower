@@ -2,11 +2,12 @@
     font-family: 'LuckiestGuy', cursive;
 }
 body {
-    background-image: url('/images/window.png');
+    background-image: url('/images/sunflowerBackground.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 .head {
+    color:#7135bb;
     text-align: center;
   display: flex;
   justify-content: center;
@@ -22,19 +23,31 @@ body {
       text-shadow: 0 0 20px #fff, 0 0 30px #4dff82, 0 0 40px #4dff82,, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
     }
   }
+.instructions {
+    color:#9ee634;
+    font-size: 30px ;
 
+}
   #pet-name {
+      color:#7135bb;
       font-size: 50px;
+      position:absolute;
+      top: 10em;
+      left: 140px;
+      animation: glow 2s ease-in-out infinite alternate;
   }
   
   .metrics {
-    display: flex;
+    position:absolute;
+    top: 15em;
+    left: 30em;
+    /* display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    /* align-items: center;
     width: 50vw;
     height: 90vh;
-    border-right: 2px solid 
+    border-right: 2px solid  */ */
   }
 
 
@@ -65,6 +78,11 @@ body {
     top: 0;
     left:0;
     overflow:hidden;
+  }
+
+  img {
+      display:flex;
+      align-content: center;
   }
 
   
