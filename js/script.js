@@ -52,6 +52,8 @@
     let waterNum = 0;
     let affirmNum = 0;
 
+    let timerPlaceholder = document.getElementById("timer");
+
     let endGame = false;
 
     let sunMax = false;
@@ -72,6 +74,7 @@
         needsSunshine();
         needsWater();
         needsAffirmation();
+        
 
        
       }
@@ -105,7 +108,17 @@
       //these functions give sun, water, and affirmation
       
 
-
+      function startAge() {
+        setInterval(function () {
+          if (time < 10) {
+            time++;
+            timerPlaceholder.textContent = `age: ${time}`;
+          } else {
+            death();
+          }
+        }, 15000);
+      }
+    
    
     
 
