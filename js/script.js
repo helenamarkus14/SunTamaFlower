@@ -61,4 +61,73 @@
 
 
 
+    // start game //
+
+    function startGame () {
+        document.getElementById("pet-name").innerHTML = document.getElementById('inputName').value;
+        $('.gamebeginarea').hide(1000);
+        $('.instructions').hide(1000);
+        $('img').attr('src', "images/babySunTransparent.png");
+    
+        needsSunshine();
+        needsWater();
+        needsAffirmation();
+
+       
+      }
+      //these functions increase bars
+      function needsSunshine() {
+          setInterval(function(){
+              if (sunshineWidth < 300 && endGame === false && sunMax === false) {
+                  sunshineWidth = sunshineWidth + 0.15;
+                  sunshineBar.style.width = sunshineWidth + 'px';
+              }
+          }, 20);
+      }
+
+      function needsWater() {
+          setInterval(function() {
+              if (waterWidth < 300 && endGame === false && waterMax === false) {
+                  waterWidth = waterWidth + 0.2;
+                  waterBar.style.width = waterWidth + 'px';
+              }
+          }, 20);
+      }
+
+      function needsAffirmation() {
+          setInterval(function() {
+              if(affirmWidth < 300 && endGame === false && affirmMax === false) {
+                  affirmWidth = affirmWidth + 0.2;
+                  affirmBar.style.width = affirmWidth + 'px';
+              }
+          }, 20);
+      }
+      //these functions give sun, water, and affirmation
+      
+
+
    
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // event listeners //
+    // sunButton.addEventListener("click", giveSunshine;
+    // waterButton.addEventListener("click", giveWater);
+    // affirmButton.addEventListener("click", giveAffirmation);
+    startPlant.addEventListener("click", startGame);
