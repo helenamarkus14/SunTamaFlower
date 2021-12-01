@@ -42,6 +42,7 @@
   }
   
   .metrics {
+    
     position:absolute;
     top: 15em;
     left: 30em;
@@ -61,20 +62,48 @@
     background-color: yellow;
     border-radius: 9px;
   }
-  .water-bar {
+.sunshine-text {
+    font-size: 25px;
+}
+
+#sunshine-button, #water-button, #affirm-button {
+    transition-duration: 0.4s;
+}
+
+#sunshine-button:hover {
+  background-color: yellow;
+  color: rgb(231, 88, 5);
+}
+#water-button:hover {
+    background-color: #154d8e;
+    color: rgb(0, 213, 255);
+}
+#affirm-button:hover {
+    background-color: rgb(184, 125, 229);
+    color:rgb(95, 3, 182);
+}
+.water-text {
+    font-size: 25px;
+}
+.affirmation-text {
+    font-size: 20px;
+}
+
+.water-bar {
     width: 1vw;
     height: 40px;
     background-color: #1392db;
     border-radius: 9px;
-  }
-  .affirmation-bar {
+}
+
+.affirmation-bar {
     width: 1vw;
     height: 40px;
     background-color: rgb(184, 125, 229);
     border-radius: 9px;
-  }
+}
  
-  .sunshine-progress, .water-progress, .affirmation-progress {
+.sunshine-progress, .water-progress, .affirmation-progress {
     height: 40px;
     width: 300px;
     
@@ -82,11 +111,29 @@
     top: 0;
     left:0;
     overflow:hidden;
-  }
+}
 
-  img {
+img {
       /* display:flex; */
       align-content: center;
-  }
+}
 
+
+.spin {
+    animation: spin 1 1s linear forwards;
+
+}
+
+@keyframes  spin{
+    from {
+      transform: rotate(0deg);
+      opacity: .75
+    }
+  
+    to {
+      transform: rotate(720deg);
+      opacity: 1;
+    }
+
+  }
   

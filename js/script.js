@@ -156,12 +156,18 @@
         }
 
       }
-
-    //   function morphFlower() {
-    //       if (ageNum > 2) {
-    //         let morphedFlower = document.createElement('img');
-    //       }
-    //   }
+     
+      function morphFlower() {
+        setInterval(function () {
+          if (ageNum > 2) {
+            $('.flowers').fadeOut(1000);
+            $('.adult-flower').fadeIn(1000);
+            $(".adult-flower").addClass("spin");
+          } else {
+            death();
+          }
+        }, 30000); // day increases every 15 seconds 
+      }
 
       function death() {
           if (sunshineWidth >= 300 || waterWidth >= 300 || affirmWidth >= 300) {
@@ -169,15 +175,30 @@
               head.textContent = "Your sunflower has wilted!"
               head.style.cssText = 'font-size:100px;color:red;'
               $('.flowers').fadeOut(1000);
+              $('.adult-flower').fadeOut(1000);
               $('.metrics').fadeOut(1000);
               $('#pet-name').fadeOut(1000);
               $('.wilted-flower').fadeIn(1000);
               clearInterval(needsSunshine);
               clearInterval(needsWater);
               clearInterval(needsAffirmation);
+              
           }
       }
-   
+
+
+      function gameWin () {
+        function gameFinish() {
+            if (
+              sunMax === true &&
+              waterMax === true &&
+              sunMax === true
+            ) {
+              gameOver = true;
+              head.textContent = "Yay! Your Tamagotchi is fully grown!";
+      }
+    }
+}
       setInterval(death, 20);
 
     
