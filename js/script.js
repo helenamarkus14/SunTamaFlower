@@ -85,13 +85,13 @@
 
       function startAge() {
         setInterval(function () {
-          if (ageNum < 10) {
+          if (ageNum < 100) {
             ageNum++;
             age.textContent = `${ageNum}`;
           } else {
             death();
           }
-        }, 15000); // day increases every 15 seconds 
+        }, 1500); // day increases every 1.5 seconds 
       }
 
       //these functions increase bars = needs more of 
@@ -101,7 +101,7 @@
                   sunshineWidth = sunshineWidth + 0.15;
                   sunshineBar.style.width = sunshineWidth + 'px';
               }
-          }, 20);
+          }, 10);
       }
 
       function needsWater() {
@@ -110,7 +110,7 @@
                   waterWidth = waterWidth + 0.2;
                   waterBar.style.width = waterWidth + 'px';
               }
-          }, 20);
+          }, 10);
       }
 
       function needsAffirmation() {
@@ -119,7 +119,7 @@
                   affirmWidth = affirmWidth + 0.2;
                   affirmBar.style.width = affirmWidth + 'px';
               }
-          }, 20);
+          }, 10);
       }
       
 
@@ -166,7 +166,7 @@
           } else {
             death();
           }
-        }, 30000); // day increases every 15 seconds 
+        }, 30000); // changes to adult at day 20
       }
 
       function death() {
@@ -176,6 +176,7 @@
               head.style.cssText = 'font-size:100px;color:red;'
               $('.flowers').fadeOut(1000);
               $('.adult-flower').fadeOut(1000);
+              $('adult-flower').removeClass('spin');
               $('.metrics').fadeOut(1000);
               $('#pet-name').fadeOut(1000);
               $('.wilted-flower').fadeIn(1000);
