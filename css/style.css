@@ -24,7 +24,8 @@ body {
     }
   }
 .instructions {
-    color:#9ee634;
+    color:#154d8e;
+    text-shadow:0 0 1px #7135bb;
     font-size: 30px ;
 
 }
@@ -47,7 +48,7 @@ body {
     /* align-items: center;
     width: 50vw;
     height: 90vh;
-    border-right: 2px solid  */ */
+    border-right: 2px solid  */ 
   }
 
 
@@ -60,7 +61,7 @@ body {
   .water-bar {
     width: 1vw;
     height: 40px;
-    background-color: #1392db ; /*red*/
+    background-color: #1392db;
     border-radius: 9px;
   }
   .affirmation-bar {

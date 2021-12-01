@@ -48,11 +48,12 @@
     let waterWidth = 10;
     let affirmWidth = 10;
 
+    let ageNum = 0;
     let sunNum = 0;
     let waterNum = 0;
     let affirmNum = 0;
 
-    let timerPlaceholder = document.getElementById("timer");
+    let age = document.querySelector(".age-counter");
 
     let endGame = false;
 
@@ -70,15 +71,26 @@
         $('.gamebeginarea').hide(1000);
         $('.instructions').hide(1000);
         $('img').attr('src', "images/babySunTransparent.png");
-    
+
+        startAge();
         needsSunshine();
         needsWater();
         needsAffirmation();
-        
-
        
       }
-      //these functions increase bars
+
+      function startAge() {
+        setInterval(function () {
+          if (ageNum < 10) {
+            ageNum++;
+            age.textContent = `${ageNum}`;
+          } else {
+            death();
+          }
+        }, 15000); // day increases every 15 seconds 
+      }
+
+      //these functions increase bars = needs more of 
       function needsSunshine() {
           setInterval(function(){
               if (sunshineWidth < 300 && endGame === false && sunMax === false) {
@@ -105,19 +117,42 @@
               }
           }, 20);
       }
-      //these functions give sun, water, and affirmation
       
 
-      function startAge() {
-        setInterval(function () {
-          if (time < 10) {
-            time++;
-            timerPlaceholder.textContent = `age: ${time}`;
-          } else {
-            death();
-          }
-        }, 15000);
+      //these functions give sun, water, and affirmation = decrease the bar
+      function giveSunshine() {
+        if (sunshineWidth > 20 && endGame === false && sunMax === false) {
+            sunshineWidth = sunshineWidth - Math.random() * 20;
+            sunshineBar.style.width = sunshineWidth + 'px';
+        } else if (endGame == false && sunMax === false) {
+            sunshineWidth = 0;
+            sunshineBar.style.width = sunshineWidth + 'px';
+        }
+
       }
+
+      function giveWater() {
+        if (waterWidth > 20 && endGame === false && waterMax === false) {
+            waterWidth = waterWidth - Math.random() * 20;
+            waterBar.style.width = waterWidth + 'px';
+        } else if (endGame == false && waterMax === false) {
+            waterWidth = 0;
+            waterBar.style.width = waterBar + 'px';
+        }
+
+      }
+
+      function giveAffirmation() {
+        if (affirmWidth > 20 && endGame === false && affirmMax === false) {
+            affirmWidth = affirmWidth - Math.random() * 20;
+            affirmBar.style.width = affirmWidth + 'px';
+        } else if (endGame == false && affirmMax === false) {
+            affirmWidth = 0;
+            affirmBar.style.width = affirmWidth + 'px';
+        }
+
+      }
+
     
    
     
@@ -140,7 +175,7 @@
 
 
     // event listeners //
-    // sunButton.addEventListener("click", giveSunshine;
+    sunButton.addEventListener("click", giveSunshine);
     // waterButton.addEventListener("click", giveWater);
     // affirmButton.addEventListener("click", giveAffirmation);
     startPlant.addEventListener("click", startGame);
