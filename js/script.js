@@ -27,7 +27,7 @@
     let startPlant = document.getElementById('beginGame');
     let sunButton = document.getElementById('sunshine-button');
     let waterButton = document.getElementById('water-button');
-    let affirmButton = document.getElementById('affirmation-button');
+    let affirmButton = document.getElementById('affirm-button');
     
     
     // ---counters--- //
@@ -38,6 +38,8 @@
 
     let affirmCounter = document.querySelector('.affirmation-counter');
 
+    // --header-- // this will update if flower dies or grows
+    let head = document.querySelector('.head');
     // --instructions--//
 
     let instructions = document.querySelector('.instructions');
@@ -70,12 +72,14 @@
         document.getElementById("pet-name").innerHTML = document.getElementById('inputName').value;
         $('.gamebeginarea').hide(1000);
         $('.instructions').hide(1000);
-        $('img').attr('src', "images/babySunTransparent.png");
+        $('.flowers').attr('src', "images/babySunTransparent.png");
 
         startAge();
+        morphFlower();
         needsSunshine();
         needsWater();
         needsAffirmation();
+        death();
        
       }
 
@@ -153,29 +157,34 @@
 
       }
 
-    
+    //   function morphFlower() {
+    //       if (ageNum > 2) {
+    //         let morphedFlower = document.createElement('img');
+    //       }
+    //   }
+
+      function death() {
+          if (sunshineWidth >= 300 || waterWidth >= 300 || affirmWidth >= 300) {
+              endGame === true;
+              head.textContent = "Your sunflower has wilted!"
+              head.style.cssText = 'font-size:100px;color:red;'
+              $('.flowers').fadeOut(1000);
+              $('.metrics').fadeOut(1000);
+              $('#pet-name').fadeOut(1000);
+              $('.wilted-flower').fadeIn(1000);
+              clearInterval(needsSunshine);
+              clearInterval(needsWater);
+              clearInterval(needsAffirmation);
+          }
+      }
    
-    
+      setInterval(death, 20);
 
     
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
     // event listeners //
     sunButton.addEventListener("click", giveSunshine);
-    // waterButton.addEventListener("click", giveWater);
-    // affirmButton.addEventListener("click", giveAffirmation);
+    waterButton.addEventListener("click", giveWater);
+    affirmButton.addEventListener("click", giveAffirmation);
     startPlant.addEventListener("click", startGame);
