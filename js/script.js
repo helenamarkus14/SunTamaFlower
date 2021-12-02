@@ -3,12 +3,12 @@
 // start the game and show all the metrics for the game
     // start as small sunflower day 0:
         // start timer
-            //transforms when timer hits 30 seconds? day 3
+            //transforms when day: 20
         // sunsine will decrease by x interval
         // water will decrease by x interval (slowest)
         // affirmation will decrease by x interval (fastest needy plant)
 
-    // game will end if any metric hits 0
+    // game will end if any metric hits the max width of progress bars
 
 
 
