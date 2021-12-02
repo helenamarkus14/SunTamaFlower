@@ -1,5 +1,5 @@
 # SunTamaFlower
-
+A fun virtual sunflower to master the art of being a plant parent. Definitely not easy!!
 # Wire Frame:
 
 https://www.figma.com/file/SpNlR15y4b3gTgLsOJO0lF/Project-One?node-id=9%3A253
