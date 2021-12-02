@@ -5,7 +5,6 @@
 https://www.figma.com/file/SpNlR15y4b3gTgLsOJO0lF/Project-One?node-id=9%3A253
 # User Story
 
-
 As a user, I want to click the button reading "click to become a sunflower parent" to start the game.
 
 As a user, I want to name my sunflower by typing in the input box. This will move to the main page.
@@ -27,13 +26,16 @@ If the sunflower wilts, the user will have the ability to click and start a new 
 
 
 
-If I could go back with more time:
+# If I could go back with more time:
 
 AAU, clicking the sunlight button will show a sun image over the flower.
 
 AAU, clicking the water button will show a watering can image over the flower.
 
 AAU, clicking the affirmation button will show a heart image over the flower.
+
+
+I had the idea to include a counter of how many of each metric is clicked, but never figured out how to make it work. I kept the code in my project so when I can, I can go back and play around with it.  
 
 
 

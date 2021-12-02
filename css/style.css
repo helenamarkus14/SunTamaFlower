@@ -38,8 +38,8 @@
       color:#7135bb;
       font-size: 50px;
       position:absolute;
-      top: 10em;
-      left: 140px;
+      top: 150px;
+      left: 800px;
       animation: glow 2s ease-in-out infinite alternate;
   }
   #beginGame {
@@ -59,7 +59,6 @@
     border-right: 2px solid  */ 
   }
 
-
 .sunshine-bar {
     width: 1vw;
     height: 40px;
@@ -70,6 +69,7 @@
 
 #sunshine-button, #water-button, #affirm-button {
     transition-duration: 0.4s;
+    border-radius: 40px;
 }
 /* change colors of buttons when hovered */
 #sunshine-button:hover {
@@ -102,6 +102,10 @@
   color:rgb(95, 3, 182);
   font-size: 20px;
 }
+.age-text, .age-counter {
+  color: rgb(3, 12, 198);
+  font-size: 30px;
+}
 
 .water-bar {
     width: 1vw;
@@ -129,8 +133,8 @@
 
 img {
   position:absolute;
-  top: 15em;
-  left: 20em;
+  top: 200px;
+  left: 360px;
       /* align-content: center; */
       
       
