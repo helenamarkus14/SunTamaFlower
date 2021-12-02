@@ -40,7 +40,9 @@
       left: 140px;
       animation: glow 2s ease-in-out infinite alternate;
   }
-  
+  #beginGame {
+    background-color:#4dff82
+  }
   .metrics {
     
     position:absolute;
