@@ -4,11 +4,12 @@
     background-repeat: no-repeat;
     background-size: cover;
 }
-/* body {
-    background-image: url('/images/sunflowerBackground.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-} */
+.gamebeginarea {
+  position:absolute;
+    top: 197px;
+    left: 60em;
+
+}
 .head {
     color:#7135bb;
     text-align: center;
@@ -30,6 +31,7 @@
     color:#154d8e;
     text-shadow:0 0 1px #7135bb;
     font-size: 30px ;
+    text-align: center;
 
 }
   #pet-name {
@@ -47,7 +49,7 @@
     
     position:absolute;
     top: 15em;
-    left: 30em;
+    left: 50em;
     /* display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,14 +66,12 @@
     background-color: yellow;
     border-radius: 9px;
   }
-.sunshine-text {
-    font-size: 25px;
-}
+
 
 #sunshine-button, #water-button, #affirm-button {
     transition-duration: 0.4s;
 }
-
+/* change colors of buttons when hovered */
 #sunshine-button:hover {
   background-color: yellow;
   color: rgb(231, 88, 5);
@@ -84,11 +84,23 @@
     background-color: rgb(184, 125, 229);
     color:rgb(95, 3, 182);
 }
+
+
+
+
+.sunshine-text {
+  color: rgb(239, 84, 7);
+  font-size: 25px;
+  
+}
+
 .water-text {
-    font-size: 25px;
+  color: rgb(0, 213, 255);
+  font-size: 25px;
 }
 .affirmation-text {
-    font-size: 20px;
+  color:rgb(95, 3, 182);
+  font-size: 20px;
 }
 
 .water-bar {
@@ -116,8 +128,12 @@
 }
 
 img {
-      /* display:flex; */
-      align-content: center;
+  position:absolute;
+  top: 15em;
+  left: 20em;
+      /* align-content: center; */
+      
+      
 }
 
 
